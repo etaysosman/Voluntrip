@@ -1,6 +1,10 @@
 const Activity = require('../models/activities');
 const path = require('path');
 
+exports.getActivity = (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/activity_details.html'));
+};
+
 exports.getActivities = (req, res, next) => {
     Activity.fetchAll()
         .then(([rows]) => {

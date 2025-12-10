@@ -11,10 +11,6 @@ exports.getAbout = (req, res) => {
 exports.getExplore = (req, res) => {
     res.sendFile(path.join(__dirname, '../views/explore.html'));
 }
-exports.getIndex = (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/index.html'));
+exports.getStart = (req, res) => {
+    res.sendFile(path.join(__dirname, '../views/start.html'));
 }
-
-
-
-
