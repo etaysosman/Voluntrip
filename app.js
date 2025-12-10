@@ -15,15 +15,16 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // כדי לקרוא נתונים מטפסים (POST)
-app.use(express.urlencoded({ extended: true }));
+//app.use(express.urlencoded({ extended: false }));
 
 // Static files (css, images) אם תרצה בהמשך
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.use(usersRoutes);
 app.use(homeRoutes);
 app.use(activitiesRoutes);
 app.use(applyRoutes);
-app.use(usersRoutes);
+
 
 //always last - 404 page not found
 app.use((req, res) => {
