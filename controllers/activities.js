@@ -17,7 +17,9 @@ exports.getActivities = (req, res, next) => {
 */
 
 exports.getActivityDetails = (req, res) => {
-         res.redirect('/activities/:id');
+         const id = req.params.id;
+         console.log("Activity ID received:", id);
+         res.sendFile(path.join(__dirname, '../views/activity_details.html'));
 
 }
 

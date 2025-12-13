@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 
 // כדי לקרוא נתונים מטפסים (POST)
-//app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: true}));
 
 // Static files (css, images) אם תרצה בהמשך
 app.use(express.static(path.join(__dirname, 'public')));
