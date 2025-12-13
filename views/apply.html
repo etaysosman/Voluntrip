@@ -6,12 +6,19 @@
 </head>
 <body>
 
+     <ul>
+        <li><a href="/welcome">Home</a></li>
+        <li><a href="/explore">Explore</a></li>
+        <li><a href="/about">About</a></li>
+   </ul>
+
+
     <h1>Apply for Activity</h1>
 
     <form method="POST" action="/save-apply">
 
         <!-- hidden field – controller יכניס את ה־activityId -->
-        <input type="hidden" name="activityId" id="activityId">
+        <input type="hidden" name="activityId" id="activityId" value="">
 
         <p>Full Name:</p>
         <input type="text" name="fullName" required>

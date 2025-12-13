@@ -18,11 +18,12 @@ module.exports = class Application {
                 this.email,
                 this.phone,
                 this.experience,
-                this.activityId
+                this.activityId // needs to be populated when applying for specific activities
             ]
         );
     }
 
+    // FOR FUTURE USE
     static fetchAll() {
         return db.execute('SELECT * FROM applications');
     }

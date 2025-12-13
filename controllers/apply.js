@@ -5,11 +5,15 @@ exports.getApply = (req, res) => {
     res.sendFile(path.join(__dirname, '../views/apply.html'));
 };
 
-exports.getApplyForm = (req, res) => {
-    const activityId = req.params.id;
-    console.log('Apply for activity:', activityId);
-    res.sendFile(path.join(__dirname, '../views/apply.html'));
-};
+/* in the future will enable passing activity ID to the apply form
+
+ exports.getApplyForm = (req, res) => {
+            const activityId = req.params.id;
+            console.log('Apply for activity:', activityId);
+            res.render('apply', { activityId: activityId });
+        };
+
+*/
 
 exports.saveApplication = (req, res) => {
             res.redirect('/explore');

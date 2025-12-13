@@ -3,7 +3,7 @@ const activitiesController = require('../controllers/activities');
 const router = express.Router();
 
 
-router.get('/activities', activitiesController.getActivity);
-//router.get('/activities/:id', activitiesController.getActivityDetails);
+router.get('/activities', activitiesController.getActivities);
+router.get('/activities/:id', activitiesController.getActivityDetails);
 
 module.exports = router;
