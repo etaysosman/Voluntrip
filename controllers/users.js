@@ -12,16 +12,17 @@ exports.getLoginPage = (req, res, next) => {
         pageTitle: 'VolunTrip - Login'
     });
 };
-
+/*
 exports.registerUser = (req, res) => {
             res.redirect('/login'); 
-}
+} 
+            */
 
-/*
+
 exports.registerUser = (req, res) => {
     const user = new User(
         req.body.name, 
-        req.body.lastname,
+        req.body.surname,
         req.body.birthdate,
         req.body.email,
         req.body.username,
@@ -35,7 +36,7 @@ exports.registerUser = (req, res) => {
         })
         .catch(err => console.log(err));
 };
-*/
+
 
 exports.loginUser = (req, res) => {
             res.redirect('/welcome');

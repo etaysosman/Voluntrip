@@ -15,17 +15,13 @@ exports.getApply = (req, res) => {
 
 */
 
-exports.saveApplication = (req, res) => {
-            res.redirect('/explore');
-        }  
-/*        
+   
 exports.saveApplication = (req, res) => {
     const application = new Apply(
         req.body.fullName,
         req.body.email,
         req.body.phone,
         req.body.experience,
-        req.body.activityId
     );
 
     application.save()
@@ -34,4 +30,3 @@ exports.saveApplication = (req, res) => {
         })
         .catch(err => console.log(err));
 };
-*/
