@@ -3,6 +3,6 @@ const pool=mysql.createPool({
     host:'localhost',
     user:'root',
     database:'voluntrip',
-    password:'QAZwsx123123@'
+    password:'qwerty123'
 });
 module.exports=pool.promise();
