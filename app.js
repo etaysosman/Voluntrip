@@ -21,6 +21,7 @@ app.set('views', path.join(__dirname, 'views'));
 // Static files (css, images) אם תרצה בהמשך
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.set('view engine', 'ejs');
 app.use(usersRoutes);
 app.use(homeRoutes);
 app.use(activitiesRoutes);

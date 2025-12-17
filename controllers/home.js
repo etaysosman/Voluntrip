@@ -12,5 +12,5 @@
         res.sendFile(path.join(__dirname, '../views/explore.html'));
     }
     exports.getStart = (req, res) => {
-        res.sendFile(path.join(__dirname, '../views/start.html'));
+        res.sendFile(path.join(__dirname, '../views/index.html'));
     }
