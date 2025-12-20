@@ -4,7 +4,10 @@ VolunTrip is an innovative web platform designed to connect users with meaningfu
 Its mission is to make international volunteering **accessible, simple, and impactful** by helping users discover, explore, and register for global volunteer activities.
 
 ---
-
+Before ruuning please run the following commands:
+npm install --save express
+npm install --save mysql2
+npm install --save ejs
 ## 📋 Table of Contents
 - [About VolunTrip](#about-voluntrip)
 - [Website Structure](#website-structure)
