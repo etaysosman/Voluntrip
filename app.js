@@ -11,7 +11,6 @@ const usersRoutes = require('./routes/users');
 const app = express();
 
 // 1) Tell Express to use EJS
-app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
@@ -19,7 +18,7 @@ app.set('views', path.join(__dirname, 'views'));
 //app.use(express.urlencoded({ extended: true}));
 
 // Static files (css, images) אם תרצה בהמשך
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static('public'));
 
 app.set('view engine', 'ejs');
 app.use(usersRoutes);
