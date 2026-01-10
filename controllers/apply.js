@@ -2,7 +2,7 @@ const path = require('path');
 const Apply = require('../models/apply');
 
 exports.getApply = (req, res) => {
-    res.sendFile(path.join(__dirname, '../views/apply.html'));
+    res.render('apply');
 };
 
 /* in the future will enable passing activity ID to the apply form

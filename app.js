@@ -17,8 +17,8 @@ app.set('views', path.join(__dirname, 'views'));
 // כדי לקרוא נתונים מטפסים (POST)
 //app.use(express.urlencoded({ extended: true}));
 
-// Static files (css, images) אם תרצה בהמשך
-app.use(express.static('public'));
+// Static files (css, images) 
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'ejs');
 app.use(usersRoutes);
@@ -29,7 +29,7 @@ app.use(applyRoutes);
 
 //always last - 404 page not found
 app.use((req, res) => {
-  res.status(404).sendFile(path.join(__dirname, 'views', 'file_not_found.html'));
+  res.status(404).render('file_not_found');
 });
 
 app.listen(3000, () => {

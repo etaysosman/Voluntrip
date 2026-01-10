@@ -1,0 +1,150 @@
+<%- include('includes/head.ejs') %>
+    <title>Welcome | VolunTrip</title>
+
+      <!-- Custom CSS -->
+      <link rel="stylesheet" href="css/welcome.css">
+
+</head>
+
+<body>
+
+<%- include('includes/menu.ejs') %>
+
+<!-- HEADER: Hero section with main page title -->
+<header>
+    <h1 class="main-title">
+        Welc<img src="images/earth-logo.png" class="logo-icon" alt="o">me to VolunTrip
+    </h1>
+
+    <p>
+        <!-- MARK: Highlighted keyword for emphasis -->
+        Travel with <mark>purpose</mark>. Volunteer with impact.
+    </p>
+</header>
+
+<!-- MAIN: Primary content container -->
+<main class="container">
+
+    <!-- SECTION: Volunteering activities showcase -->
+    <section>
+        <h2 class="text-center mb-5">Top Volunteering Activities</h2>
+
+        <div class="row g-4">
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3">
+                <div class="activity">
+                    <i class="bi bi-book"></i>
+                    <h5>Education</h5>
+                    <p>Teach and empower communities worldwide.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3">
+                <div class="activity">
+                    <i class="bi bi-tree"></i>
+                    <h5>Environment</h5>
+                    <p>Protect nature and wildlife.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3">
+                <div class="activity">
+                    <i class="bi bi-heart-pulse"></i>
+                    <h5>Healthcare</h5>
+                    <p>Support health initiatives globally.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3">
+                <div class="activity">
+                    <i class="bi bi-people"></i>
+                    <h5>Community</h5>
+                    <p>Build stronger local communities.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SECTION: Volunteering-related images gallery -->
+    <section class="nature">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <img src="images/animals.png" alt="animal care">
+            </div>
+            <div class="col-md-4">
+                <img src="images/food.png" alt="food distribution">
+            </div>
+            <div class="col-md-4">
+                <img src="images/sea.png" alt="beach cleanup">
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Impact statistics display -->
+    <section class="statistics text-center">
+        <h2 class="mb-5">Our Impact</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3>42+</h3>
+                <p>Countries</p>
+            </div>
+            <div class="col-md-4">
+                <h3>12,000+</h3>
+                <p>Active Volunteers</p>
+            </div>
+            <div class="col-md-4">
+                <h3>350,000+</h3>
+                <p>Impact Points</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ASIDE: Supplementary information about VolunTrip -->
+    <aside>
+        <h4>Why VolunTrip?</h4>
+         <p>
+        VolunTrip connects travelers with meaningful volunteer opportunities across the globe, 
+        helping them create <strong>real social impact</strong> while discovering new cultures. 
+        We believe that every journey can be more than just a trip - it can be a chance to make a 
+        difference, meet inspiring people, and contribute to communities in need.
+        <br><br>
+        Our platform allows volunteers to join projects in education, environmental care, 
+        healthcare assistance and community support. With guidance, personalized matching 
+        and verified organizations worldwide, we make volunteering safe, accessible and 
+        meaningful for everyone.
+        <br><br>
+        Whether you are traveling alone, with friends or as part of a group - VolunTrip turns your experience 
+        into something unforgettable. Pack your backpack, open your heart, and start changing the world - one trip at a time.
+    </p>
+    </aside>
+
+    <!-- SECTION: Partner organizations showcase -->
+    <section class="partners text-center">
+        <h3 class="mb-5">Our Partners</h3>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+                <img src="https://www.roomtoread.org/media/x2rh0554/volunteer-examples-icons.png" alt="VOL1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="https://wwhinternationalvolunteering.com/wp-content/uploads/2023/08/cropped-WWH-international-volunteering-e1691070757970-removebg-preview.png" alt="VOL2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="https://aiesec.nl/wp-content/uploads/2021/11/product_GV-horizontal-color.gif" alt="VOL3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="https://letsvolunteerla.org/wp-content/uploads/sites/46/2025/01/ColorLALogo340.png" alt="VOL4">
+            </div>
+            
+        </div>
+    </section>
+
+</main>
+
+<%- include('includes/end.ejs') %>

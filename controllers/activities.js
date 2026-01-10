@@ -2,7 +2,7 @@ const Activity = require('../models/activities');
 const path = require('path');
 
 exports.getActivities = (req, res, next) => {
-       res.redirect('/explore');
+       res.render('explore');
 }
 
 /*
@@ -19,7 +19,7 @@ exports.getActivities = (req, res, next) => {
 exports.getActivityDetails = (req, res) => {
          const id = req.params.id;
          console.log("Activity ID received:", id);
-         res.sendFile(path.join(__dirname, '../views/activity_details.html'));
+         res.render('activity_details');
 
 }
 
