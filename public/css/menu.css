@@ -1,0 +1,114 @@
+/* ================= MENU / NAV ================= */
+
+.vt-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 34px;
+  height: 92px;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.08);
+}
+
+.vt-nav__left,
+.vt-nav__right {
+  display: flex;
+  align-items: center;
+  min-width: 160px; /* keeps center truly centered */
+}
+
+.vt-nav__center {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+}
+
+.vt-nav__logo {
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.vt-nav__logo img {
+  display: block;
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+}
+
+/* Links */
+.vt-nav__link {
+  text-decoration: none;
+  font-weight: 700;
+  color: #0b3c5d;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.vt-nav__link:hover {
+  background: rgba(13, 110, 253, 0.1);
+  color: #0d6efd;
+  transform: translateY(-1px);
+}
+
+/* Logout */
+.vt-nav__logout {
+  margin-left: auto;
+  text-decoration: none;
+  font-weight: 700;
+  color: #0b3c5d;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(13, 110, 253, 0.18);
+  background: rgba(13, 110, 253, 0.06);
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.vt-nav__logout:hover {
+  background: rgba(13, 110, 253, 0.12);
+  transform: translateY(-1px);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .vt-nav {
+    padding: 0 16px;
+    height: 82px;
+    margin-bottom: 8px;
+  }
+
+  .vt-nav__left,
+  .vt-nav__right {
+    min-width: auto;
+  }
+
+  .vt-nav__center {
+    gap: 12px;
+  }
+
+  .vt-nav__logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vt-nav__link {
+    padding: 8px 10px;
+    font-size: 0.98rem;
+  }
+
+  /* optional: hide Logout text on small screens (keeps icon) */
+  .vt-nav__logout {
+    padding: 8px 10px;
+  }
+}

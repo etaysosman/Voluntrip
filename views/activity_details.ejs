@@ -1,0 +1,42 @@
+<%- include('includes/head') %>
+
+<link rel="stylesheet" href="/css/welcome.css">
+
+<title>Activity Details</title>
+</head>
+
+<body>
+
+<%- include('includes/menu') %>
+
+<main class="container py-5">
+
+    <h1>Activity Details</h1>
+
+    <p>More information about this activity will be displayed here.</p>
+
+    <button
+        type="button"
+        class="btn btn-info btn-block btn-custom-signup"
+        onclick="applyActivity()">
+        Apply Now
+    </button>
+
+</main>
+
+<script>
+    function applyActivity() {
+        window.location.href = '/apply';
+    }
+</script>
+
+<!-- in the future, we want to pass the activity ID in the URL
+<script>
+    function applyActivity() {
+        const activityId = new URLSearchParams(window.location.search).get('id');
+        window.location.href = '/apply?id=' + activityId;
+    }
+</script>
+-->
+
+<%- include('includes/end') %>

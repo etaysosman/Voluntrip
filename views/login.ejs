@@ -1,0 +1,52 @@
+<%- include('includes/starting-pages') %>
+
+  <title>Login</title>
+</head>
+
+<body class="vt page-login">
+  <div class="vt-bg" aria-hidden="true"></div>
+
+  <main class="vt-wrap">
+    <div class="container">
+      <div class="vt-auth">
+
+        <a href="/" class="vt-back">← Back</a>
+
+        <section class="vt-card">
+          <h1 class="vt-title">Login</h1>
+
+          <form action="/login" method="POST">
+            <div class="form-group">
+              <label class="vt-label" for="username">Username</label>
+              <input type="text" class="form-control vt-input" id="username" name="username" required>
+            </div>
+
+            <div class="form-group">
+              <label class="vt-label" for="password">Password</label>
+              <input type="password" class="form-control vt-input" id="password" name="password" required>
+            </div>
+
+            <button type="submit" class="btn vt-btn vt-btn--dark btn-block">Login</button>
+          </form>
+
+          <div class="vt-divider"></div>
+
+          <div class="text-center">
+            <p class="mb-2 text-muted">Don't have an account?</p>
+            <a href="/register" class="btn vt-btn vt-btn--light px-5">Sign-up</a>
+            <br>
+            <br>
+            <p class="mb-2 text-muted">Having trouble logging in?</p>
+            <a href="https://alonnu.mtacloud.co.il/voluntrip-support/contact.html" class="btn vt-btn vt-btn--light px-5">Contact VolunTrip Support</a>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

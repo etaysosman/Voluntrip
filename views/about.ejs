@@ -1,0 +1,337 @@
+<%- include('includes/head') %>
+
+<link rel="stylesheet" href="/css/about.css">
+
+<title>About VolunTrip</title>
+</head>
+
+<body>
+
+<%- include('includes/menu') %>
+
+<main class="container py-5">
+
+    <header class="about-hero">
+        <div class="row align-items-center g-4">
+            <div class="col-lg-7">
+                <h1 class="about-title">About VolunTrip</h1>
+                <p class="about-lead">
+                    VolunTrip connects volunteers with impactful global projects.
+                    Our mission is to make volunteering accessible and meaningful for everyone.
+                </p>
+
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="bi bi-shield-check"></i>
+                        <div>
+                            <strong>Verified Partners</strong>
+                            <div class="small text-muted">Organizations reviewed for safety & trust.</div>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <i class="bi bi-compass"></i>
+                        <div>
+                            <strong>Smart Matching</strong>
+                            <div class="small text-muted">Choose by cause, location, and time.</div>
+                        </div>
+                    </div>
+
+                    <div class="highlight">
+                        <i class="bi bi-people"></i>
+                        <div>
+                            <strong>Community</strong>
+                            <div class="small text-muted">Meet people and build real impact together.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-4 d-flex gap-2 flex-wrap">
+                    <a class="btn btn-primary" href="/explore">
+                        <i class="bi bi-compass"></i> Explore Activities
+                    </a>
+                    <a class="btn btn-outline-primary" href="#faq-title">
+                        <i class="bi bi-question-circle"></i> Read FAQ
+                    </a>
+                </div>
+            </div>
+
+            <aside class="col-lg-5">
+                <div class="about-media">
+                    <video class="w-100" controls preload="metadata">
+                        <source src="/media/voluntrip.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="small text-muted mt-2">
+                        A quick look at what volunteering feels like with VolunTrip.
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </header>
+
+    <!-- SECTION: Our Story (ASIDE on the other side in Desktop) -->
+    <section class="our-story mt-4" aria-labelledby="story-title">
+        <div class="row g-4 align-items-start">
+
+            <!-- ASIDE: left on desktop, first on mobile -->
+            <aside class="col-lg-4 order-lg-1 order-1">
+                <div class="story-aside">
+                    <h3 class="h6 mb-3">
+                        <i class="bi bi-compass-fill"></i> What we believe
+                    </h3>
+
+                    <ul class="story-list">
+                        <li><strong>Impact</strong> should be measurable — not just a slogan.</li>
+                        <li><strong>Trust</strong> is built with clear expectations.</li>
+                        <li><strong>Support</strong> matters before, during, and after the trip.</li>
+                    </ul>
+
+                    <figure class="story-badges mt-3">
+                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Verified+Partner" alt="Verified Partner badge" loading="lazy">
+                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Global+NGO" alt="Global NGO badge" loading="lazy">
+                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Trusted+Network" alt="Trusted Network badge" loading="lazy">
+                    </figure>
+
+                    <div class="small text-muted mt-2">
+                        You can replace these badges with your real partner logos later.
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ARTICLE: right on desktop -->
+            <article class="col-lg-8 order-lg-2 order-2">
+                <div class="content-card">
+                    <h2 id="story-title" class="mb-3">Our Story</h2>
+
+                    <p class="mb-3">
+                        VolunTrip started with a simple problem: volunteering abroad felt <strong>confusing</strong>.
+                        Too many options, not enough clarity, and no easy way to know what’s legit.
+                    </p>
+
+                    <p class="mb-3">
+                        In 2023, our founder <strong>Noam Levi</strong> (a backpacker with a laptop and a big spreadsheet)
+                        tried to volunteer during a trip in Southeast Asia. After spending days comparing programs,
+                        messaging organizations, and getting mixed answers, he realized: the missing piece wasn’t “more trips” —
+                        it was <strong>better trust</strong> and a smoother process.
+                    </p>
+
+                    <p class="mb-0">
+                        He built the first prototype from a hostel common room, tested it with friends, and kept improving it
+                        until it became VolunTrip — a platform that helps people travel with purpose while staying safe,
+                        organized, and supported.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SECTION: Testimonials (ARTICLE) -->
+    <section class="testimonials mt-4" aria-labelledby="testimonials-title">
+        <h2 id="testimonials-title" class="text-center mb-4">Stories from Volunteers</h2>
+
+        <div class="row g-4">
+            <!-- Use initials avatars (not real photos) -->
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Maya&radius=50" alt="Maya avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Maya
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Thailand • Education</div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">5.0</span>
+                    </div>
+                    <p class="mt-3 mb-0">“I felt like my trip actually mattered. The organization was clear, and I came back with friends for life.”</p>
+                </div>
+            </article>
+
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Daniel&radius=50" alt="Daniel avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Daniel
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Costa Rica • Wildlife</div>
+                            <div class="review-stars" aria-label="4.5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">4.5</span>
+                    </div>
+                    <p class="mt-3 mb-0">“Clear process, verified partners, and a real sense of impact. I knew what to expect every step.”</p>
+                </div>
+            </article>
+
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Liora&radius=50" alt="Liora avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Liora
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Nepal • Community</div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">5.0</span>
+                    </div>
+                    <p class="mt-3 mb-0">“The platform made it easy to choose the right project for my schedule. Support was super responsive.”</p>
+                </div>
+            </article>
+
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Amir&radius=50" alt="Amir avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Amir
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Greece • Environment</div>
+                            <div class="review-stars" aria-label="4 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">4.0</span>
+                    </div>
+                    <p class="mt-3 mb-0">“I was nervous at first, but the checklist and prep tips made everything smoother. Loved the team vibe.”</p>
+                </div>
+            </article>
+
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Sarah&radius=50" alt="Sarah avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Sarah
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Kenya • Healthcare</div>
+                            <div class="review-stars" aria-label="4.5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">4.5</span>
+                    </div>
+                    <p class="mt-3 mb-0">“Great structure. I knew exactly where to go, who to contact, and what the project needed from me.”</p>
+                </div>
+            </article>
+
+            <article class="col-md-4">
+                <div class="testimonial-card">
+                    <div class="review-head">
+                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Yonatan&radius=50" alt="Yonatan avatar" loading="lazy">
+
+                        <div>
+                            <div class="review-name">
+                                Yonatan
+                                <span class="verified-pill">
+                                    <i class="bi bi-patch-check-fill"></i> Verified
+                                </span>
+                            </div>
+                            <div class="review-meta">Peru • Education</div>
+                            <div class="review-stars" aria-label="5 out of 5 stars">
+                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            </div>
+                        </div>
+
+                        <span class="review-chip">5.0</span>
+                    </div>
+                    <p class="mt-3 mb-0">“The matching felt personal. The project was meaningful, and I left with new skills and confidence.”</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+    <!-- SECTION: FAQ (semantic, no Bootstrap JS needed) -->
+    <section class="faq mt-4" aria-labelledby="faq-title">
+        <h2 id="faq-title" class="text-center mb-4">FAQ</h2>
+
+        <div class="faq-list">
+            <details>
+                <summary>Is volunteering abroad safe?</summary>
+                <div class="faq-body">
+                    We encourage using verified partners and reading requirements. Safety depends on the destination and the project.
+                </div>
+            </details>
+
+            <details>
+                <summary>Do I need experience?</summary>
+                <div class="faq-body">
+                    Not always. Many projects welcome beginners and provide guidance.
+                </div>
+            </details>
+
+            <details>
+                <summary>How do I start?</summary>
+                <div class="faq-body">
+                    Go to <a href="/explore">Explore</a>, choose a category, and open an activity for details.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- SECTION: Follow us (moved to end) -->
+    <section class="social mt-4" aria-labelledby="social-title">
+        <h2 id="social-title" class="text-center mb-4">Follow us on Social Media</h2>
+
+        <nav class="social-links" aria-label="Social media links">
+            <a class="social-link" href="#" aria-label="Instagram">
+                <i class="bi bi-instagram"></i> Instagram
+            </a>
+            <a class="social-link" href="#" aria-label="TikTok">
+                <i class="bi bi-tiktok"></i> TikTok
+            </a>
+            <a class="social-link" href="#" aria-label="YouTube">
+                <i class="bi bi-youtube"></i> YouTube
+            </a>
+            <a class="social-link" href="#" aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+        </nav>
+    </section>
+
+    <script>
+       
+    </script>
+
+</main>
+
+<%- include('includes/end') %>

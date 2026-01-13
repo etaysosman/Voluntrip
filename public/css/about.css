@@ -1,0 +1,254 @@
+/* ================= ABOUT PAGE ================= */
+
+.about-hero{
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 26px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.about-title{
+  font-weight: 900;
+  letter-spacing: 0.2px;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+  color: #0b3c5d;
+}
+
+.about-lead{
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #2b2b2b;
+  margin-bottom: 18px;
+}
+
+.about-highlights{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.highlight{
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(13,110,253,0.06);
+  border: 1px solid rgba(13,110,253,0.12);
+  border-radius: 14px;
+  padding: 12px 14px;
+}
+
+.highlight i{
+  font-size: 1.3rem;
+  color: #0d6efd;
+  margin-top: 2px;
+}
+
+.about-media{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.about-media video{
+  border-radius: 12px;
+}
+
+/* Reduce huge visual gaps between sections */
+.our-story,
+.testimonials,
+.world,
+.faq,
+.social{
+  scroll-margin-top: 110px;
+}
+
+/* ================= OUR STORY ================= */
+
+.content-card{
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.story-aside{
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(13,110,253,0.10);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.05);
+}
+
+.story-aside i{
+  color: #0d6efd;
+}
+
+.story-list{
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.65;
+}
+
+.story-badges{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.story-badges img{
+  height: 34px;
+  width: auto;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px 10px;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ================= TESTIMONIALS ================= */
+
+.testimonial-card{
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px;
+  height: 100%;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.review-head{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.avatar{
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(13,110,253,0.18);
+  background: rgba(13,110,253,0.06);
+}
+
+.review-name{
+  font-weight: 800;
+  color: #0b3c5d;
+  line-height: 1.1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.review-meta{
+  font-size: 0.9rem;
+  color: #667;
+}
+
+.review-stars{
+  display: inline-flex;
+  gap: 2px;
+  margin-top: 4px;
+  color: #f4b400;
+}
+
+.verified-pill{
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: rgba(25,135,84,0.10);
+  border: 1px solid rgba(25,135,84,0.18);
+  color: #198754;
+  font-weight: 800;
+  font-size: 0.8rem;
+}
+
+.verified-pill i{
+  font-size: 0.95rem;
+}
+
+.review-chip{
+  margin-left: auto;
+  font-weight: 900;
+  color: #0b3c5d;
+  padding: 6px 10px;
+  border-radius: 12px;
+  background: rgba(13,110,253,0.06);
+  border: 1px solid rgba(13,110,253,0.12);
+  min-width: 52px;
+  text-align: center;
+}
+
+/* ================= SOCIAL ================= */
+
+.social-links{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link{
+  text-decoration: none;
+  font-weight: 800;
+  color: #0b3c5d;
+  background: rgba(13,110,253,0.06);
+  border: 1px solid rgba(13,110,253,0.12);
+  padding: 10px 14px;
+  border-radius: 14px;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.social-link:hover{
+  transform: translateY(-1px);
+  background: rgba(13,110,253,0.10);
+  color: #0d6efd;
+}
+
+.social-link i{
+  margin-right: 6px;
+}
+
+/* ================= FAQ ================= */
+
+.faq-list details{
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 14px 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(0,0,0,0.05);
+  margin-bottom: 12px;
+}
+
+.faq-list summary{
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.faq-body{
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.65;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 992px){
+  .about-hero{
+    padding: 18px;
+  }
+
+  .about-title{
+    font-size: 2rem;
+  }
+}
