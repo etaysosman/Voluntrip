@@ -284,40 +284,6 @@ aside {
 }
 
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .vt-nav {
-    padding: 0 16px;
-    height: 82px;
-    margin-bottom: 8px;
-  }
-
-  .vt-nav__left,
-  .vt-nav__right {
-    min-width: auto;
-  }
-
-  .vt-nav__center {
-    gap: 12px;
-  }
-
-  .vt-nav__logo img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .vt-nav__link {
-    padding: 8px 10px;
-    font-size: 0.98rem;
-  }
-
-  /* optional: hide Logout text on small screens (keeps icon) */
-  .vt-nav__logout {
-    padding: 8px 10px;
-  }
-}
-
-
 /* ================= ABOUT PAGE ================= */
 
 .about-hero{
@@ -600,3 +566,38 @@ aside {
         font-size: 2.2rem;
     }
 }
+
+/* ================= RESPONSIVE MENU NAV ================= */
+@media (max-width: 768px) {
+  .vt-nav {
+    padding: 0 16px;
+    height: 82px;
+    margin-bottom: 8px;
+  }
+
+  .vt-nav__left,
+  .vt-nav__right {
+    min-width: auto;
+  }
+
+  .vt-nav__center {
+    gap: 12px;
+  }
+
+  .vt-nav__logo img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .vt-nav__link {
+    padding: 8px 10px;
+    font-size: 0.98rem;
+  }
+
+  /* optional: hide Logout text on small screens (keeps icon) */
+  .vt-nav__logout {
+    padding: 8px 10px;
+  }
+}
+
+
