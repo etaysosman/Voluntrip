@@ -1,6 +1,6 @@
 <%- include('includes/head') %>
 
-<link rel="stylesheet" href="/css/about.css">
+
 
 <title>About VolunTrip</title>
 </head>
@@ -71,7 +71,8 @@
     </header>
 
     <!-- SECTION: Our Story (ASIDE on the other side in Desktop) -->
-    <section class="our-story mt-4" aria-labelledby="story-title">
+    <section class="our-story mt-4"
+    >
         <div class="row g-4 align-items-start">
 
             <!-- ASIDE: left on desktop, first on mobile -->
@@ -81,21 +82,13 @@
                         <i class="bi bi-compass-fill"></i> What we believe
                     </h3>
 
-                    <ul class="story-list">
-                        <li><strong>Impact</strong> should be measurable — not just a slogan.</li>
-                        <li><strong>Trust</strong> is built with clear expectations.</li>
-                        <li><strong>Support</strong> matters before, during, and after the trip.</li>
+                   <ul class="story-list">
+                        <li><strong>People first</strong> - every project is built around real communities.</li>
+                        <li><strong>Meaningful work</strong> - you know exactly where your time and energy go.</li>
+                        <li><strong>Shared journeys</strong> - you never volunteer alone.</li>
+                        <li><strong>Safe experiences</strong> - clear guidelines and trust.</li>
                     </ul>
 
-                    <figure class="story-badges mt-3">
-                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Verified+Partner" alt="Verified Partner badge" loading="lazy">
-                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Global+NGO" alt="Global NGO badge" loading="lazy">
-                        <img src="https://dummyimage.com/120x36/ffffff/0b3c5d.png&text=Trusted+Network" alt="Trusted Network badge" loading="lazy">
-                    </figure>
-
-                    <div class="small text-muted mt-2">
-                        You can replace these badges with your real partner logos later.
-                    </div>
                 </div>
             </aside>
 
@@ -128,7 +121,7 @@
     </section>
 
     <!-- SECTION: Testimonials (ARTICLE) -->
-    <section class="testimonials mt-4" aria-labelledby="testimonials-title">
+    <section class="testimonials mt-4">
         <h2 id="testimonials-title" class="text-center mb-4">Stories from Volunteers</h2>
 
         <div class="row g-4">
@@ -146,7 +139,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Thailand • Education</div>
-                            <div class="review-stars" aria-label="5 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
                         </div>
@@ -170,7 +163,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Costa Rica • Wildlife</div>
-                            <div class="review-stars" aria-label="4.5 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                             </div>
                         </div>
@@ -194,7 +187,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Nepal • Community</div>
-                            <div class="review-stars" aria-label="5 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
                         </div>
@@ -218,7 +211,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Greece • Environment</div>
-                            <div class="review-stars" aria-label="4 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
                             </div>
                         </div>
@@ -242,7 +235,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Kenya • Healthcare</div>
-                            <div class="review-stars" aria-label="4.5 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
                             </div>
                         </div>
@@ -266,7 +259,7 @@
                                 </span>
                             </div>
                             <div class="review-meta">Peru • Education</div>
-                            <div class="review-stars" aria-label="5 out of 5 stars">
+                            <div class="review-stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
                             </div>
                         </div>
@@ -280,8 +273,7 @@
     </section>
 </div>
 
-    <!-- SECTION: FAQ (semantic, no Bootstrap JS needed) -->
-    <section class="faq mt-4" aria-labelledby="faq-title">
+    <section class="faq mt-4">
         <h2 id="faq-title" class="text-center mb-4">FAQ</h2>
 
         <div class="faq-list">
@@ -308,21 +300,20 @@
         </div>
     </section>
 
-    <!-- SECTION: Follow us (moved to end) -->
-    <section class="social mt-4" aria-labelledby="social-title">
+    <section class="social mt-4">
         <h2 id="social-title" class="text-center mb-4">Follow us on Social Media</h2>
 
-        <nav class="social-links" aria-label="Social media links">
-            <a class="social-link" href="#" aria-label="Instagram">
+        <nav class="social-links">
+            <a class="social-link" href="https://www.instagram.com" target="_blank">
                 <i class="bi bi-instagram"></i> Instagram
             </a>
-            <a class="social-link" href="#" aria-label="TikTok">
+            <a class="social-link" href="https://www.tiktok.com" target="_blank">
                 <i class="bi bi-tiktok"></i> TikTok
             </a>
-            <a class="social-link" href="#" aria-label="YouTube">
+            <a class="social-link" href="https://www.youtube.com" target="_blank">
                 <i class="bi bi-youtube"></i> YouTube
             </a>
-            <a class="social-link" href="#" aria-label="LinkedIn">
+            <a class="social-link" href="https://www.linkedin.com" target="_blank">
                 <i class="bi bi-linkedin"></i> LinkedIn
             </a>
         </nav>

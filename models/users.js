@@ -2,20 +2,22 @@ const db = require('../util/database');
 
 module.exports = class User {
 
-    constructor(name, surname, birthdate, username, email, password) {
-        this.name = name;
-        this.surname = surname;
+    constructor(fullName, id, birthdate, username, email, password) {
+        this.fullName = fullName;
+        this.id = id;
         this.birthdate = birthdate;
         this.username = username;
         this.email = email;
         this.password = password;
     }
 
+    //
+
 
     save() {
         return db.execute(
-            'INSERT INTO users (name, surname, birthdate, username, email, password) VALUES (?, ?, ?, ?, ?, ?)',
-            [this.name, this.surname, this.birthdate, this.email, this.username, this.password]
+            'INSERT INTO users (fullName, id, birthdate, username, email, password) VALUES (?, ?, ?, ?, ?, ?)',
+            [this.fullName, this.id, this.birthdate, this.username, this.email, this.password]
         );
     }
 

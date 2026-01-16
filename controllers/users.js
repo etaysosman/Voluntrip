@@ -1,22 +1,22 @@
 const path = require('path');
 const User = require('../models/users');
+//const bcrypt = require('bcryptjs');
 
 exports.getRegisterPage = (req, res, next) => {
-    res.render('register', {
-        pageTitle: 'VolunTrip - Sign Up'
+    res.render('register', { //need to send error parameter {'error':""}
     });
 };
 
 exports.getLoginPage = (req, res, next) => {
     res.render('login', {
-        pageTitle: 'VolunTrip - Login'
     });
 };
+
 /*
 exports.registerUser = (req, res) => {
             res.redirect('/login'); 
 } 
-            */
+*/
 
 
 exports.registerUser = (req, res) => {
@@ -39,7 +39,7 @@ exports.registerUser = (req, res) => {
 
 
 exports.loginUser = (req, res) => {
-            res.redirect('/welcome');
+            res.render('home');
         }      
 /*
 exports.loginUser = (req, res) => {
@@ -58,7 +58,7 @@ exports.loginUser = (req, res) => {
                 return res.send('Incorrect password');
             }
 
-            res.redirect('/welcome'); 
+            res.redirect('/home'); 
         })
         .catch(err => console.log(err));
 

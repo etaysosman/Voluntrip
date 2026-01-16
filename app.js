@@ -5,17 +5,18 @@ const path = require('path');
 
 const homeRoutes = require('./routes/home');
 const activitiesRoutes = require('./routes/activities');
+const reviewsRoutes = require('./routes/reviews');
 const applyRoutes = require('./routes/apply');
 const usersRoutes = require('./routes/users');
 
 const app = express();
 
-// 1) Tell Express to use EJS
+//Tell Express to use EJS
 app.set('views', path.join(__dirname, 'views'));
 
 
-// כדי לקרוא נתונים מטפסים (POST)
-//app.use(express.urlencoded({ extended: true}));
+// Middleware to parse URL-encoded bodies
+app.use(express.urlencoded({ extended: false}));
 
 // Static files (css, images) 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -24,7 +25,9 @@ app.set('view engine', 'ejs');
 app.use(usersRoutes);
 app.use(homeRoutes);
 app.use(activitiesRoutes);
+app.use(reviewsRoutes);
 app.use(applyRoutes);
+
 
 
 //always last - 404 page not found
