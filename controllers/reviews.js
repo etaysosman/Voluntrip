@@ -28,7 +28,8 @@ exports.postReview = (req, res) => {
 
   review.save()
     .then(() => {
-      res.redirect('/about');
+      console.log('Review sent');
+      res.redirect('/home');
     })
     .catch(err => {
       console.log(err);

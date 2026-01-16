@@ -1,8 +1,18 @@
-const connect = require('../models/connect');
-
+const Connect = require('../models/connect');
 
 exports.getConnect = (req, res) => {
-  res.render('connect');
+  Connect.fetchLatest()
+    .then(([rows]) => {
+      res.render('connect', {
+        suggestions: rows
+      });
+    })
+    .catch(err => {
+      console.log(err);
+      res.render('connect', {
+        suggestions: []
+      });
+    });
 };
 
 exports.postConnect = (req, res) => {
@@ -19,6 +29,7 @@ exports.postConnect = (req, res) => {
 
   suggestion.save()
     .then(() => {
+      console.log("Suggestion Sent")
       res.redirect('/connect');
     })
     .catch(err => {
