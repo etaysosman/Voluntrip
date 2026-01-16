@@ -124,153 +124,67 @@
     <section class="testimonials mt-4">
         <h2 id="testimonials-title" class="text-center mb-4">Stories from Volunteers</h2>
 
-        <div class="row g-4">
-            <!-- Use initials avatars (not real photos) -->
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Maya&radius=50" alt="Maya avatar" loading="lazy">
+            <div class="row g-4">
+                <% if (reviews && reviews.length > 0) { %>
+
+                <% reviews.forEach(r => { %>
+                    <article class="col-md-4">
+                    <div class="testimonial-card">
+                        <div class="review-head">
+                        <img
+                            class="avatar"
+                            src="https://api.dicebear.com/9.x/initials/svg?seed=
+                            <%= encodeURIComponent(r.volunteerName || 'V') %>&radius=50"
+                            alt="Avatar"
+                            loading="lazy"
+                        >
 
                         <div>
                             <div class="review-name">
-                                Maya
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
+                            <%= r.volunteerName %>
+                            <span class="verified-pill">
+                                <i class="bi bi-patch-check-fill"></i> Verified
+                            </span>
                             </div>
-                            <div class="review-meta">Thailand • Education</div>
+
+                            <div class="review-meta">
+                            <%= r.location %> • <%= r.category %>
+                            </div>
+
                             <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                            <% for (let i = 1; i <= 5; i++) { %>
+                                <% if (i <= r.rating) { %>
+                                <i class="bi bi-star-fill"></i>
+                                <% } else { %>
+                                <i class="bi bi-star"></i>
+                                <% } %>
+                            <% } %>
                             </div>
                         </div>
 
-                        <span class="review-chip">5.0</span>
-                    </div>
-                    <p class="mt-3 mb-0">“I felt like my trip actually mattered. The organization was clear, and I came back with friends for life.”</p>
-                </div>
-            </article>
-
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Daniel&radius=50" alt="Daniel avatar" loading="lazy">
-
-                        <div>
-                            <div class="review-name">
-                                Daniel
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
-                            </div>
-                            <div class="review-meta">Costa Rica • Wildlife</div>
-                            <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                            </div>
+                        <span class="review-chip"><%= Number(r.rating).toFixed(1) %></span>
                         </div>
 
-                        <span class="review-chip">4.5</span>
-                    </div>
-                    <p class="mt-3 mb-0">“Clear process, verified partners, and a real sense of impact. I knew what to expect every step.”</p>
-                </div>
-            </article>
-
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Liora&radius=50" alt="Liora avatar" loading="lazy">
-
-                        <div>
-                            <div class="review-name">
-                                Liora
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
-                            </div>
-                            <div class="review-meta">Nepal • Community</div>
-                            <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
+                        <p class="mt-3 mb-0">“<%= r.description %>”</p>
+                        <div class="small text-muted mt-2">
+                        <i class="bi bi-calendar3"></i> <%= r.daysVolunteered %> days volunteered
                         </div>
-
-                        <span class="review-chip">5.0</span>
                     </div>
-                    <p class="mt-3 mb-0">“The platform made it easy to choose the right project for my schedule. Support was super responsive.”</p>
-                </div>
-            </article>
+                    </article>
+                <% }) %>
 
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Amir&radius=50" alt="Amir avatar" loading="lazy">
-
-                        <div>
-                            <div class="review-name">
-                                Amir
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
-                            </div>
-                            <div class="review-meta">Greece • Environment</div>
-                            <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>
-                            </div>
-                        </div>
-
-                        <span class="review-chip">4.0</span>
+                <% } else { %>
+                <div class="col-12">
+                    <div class="alert alert-light border text-center mb-0">
+                    No reviews yet. Be the first to add one in the <a href="/reviews">Reviews</a> page.
                     </div>
-                    <p class="mt-3 mb-0">“I was nervous at first, but the checklist and prep tips made everything smoother. Loved the team vibe.”</p>
                 </div>
-            </article>
-
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Sarah&radius=50" alt="Sarah avatar" loading="lazy">
-
-                        <div>
-                            <div class="review-name">
-                                Sarah
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
-                            </div>
-                            <div class="review-meta">Kenya • Healthcare</div>
-                            <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
-                            </div>
-                        </div>
-
-                        <span class="review-chip">4.5</span>
-                    </div>
-                    <p class="mt-3 mb-0">“Great structure. I knew exactly where to go, who to contact, and what the project needed from me.”</p>
-                </div>
-            </article>
-
-            <article class="col-md-4">
-                <div class="testimonial-card">
-                    <div class="review-head">
-                        <img class="avatar" src="https://api.dicebear.com/9.x/initials/svg?seed=Yonatan&radius=50" alt="Yonatan avatar" loading="lazy">
-
-                        <div>
-                            <div class="review-name">
-                                Yonatan
-                                <span class="verified-pill">
-                                    <i class="bi bi-patch-check-fill"></i> Verified
-                                </span>
-                            </div>
-                            <div class="review-meta">Peru • Education</div>
-                            <div class="review-stars">
-                                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                            </div>
-                        </div>
-
-                        <span class="review-chip">5.0</span>
-                    </div>
-                    <p class="mt-3 mb-0">“The matching felt personal. The project was meaningful, and I left with new skills and confidence.”</p>
-                </div>
-            </article>
-        </div>
+                <% } %>
+            </div>
     </section>
+
+
+    
 </div>
 
     <section class="faq mt-4">
