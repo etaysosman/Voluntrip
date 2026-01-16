@@ -29,7 +29,7 @@ module.exports = class Review {
   static fetchLatest() {
     return db.execute(
       `SELECT * FROM reviews
-       ORDER BY id DESC
+       ORDER BY reviewId  DESC
        LIMIT 6`,
     );
   }
@@ -37,7 +37,7 @@ module.exports = class Review {
   static fetchAll() {
     return db.execute(
       `SELECT * FROM reviews
-       ORDER BY id DESC`
+       ORDER BY reviewId  DESC`
     );
   }
 };

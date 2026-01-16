@@ -27,8 +27,13 @@ module.exports = class Connect {
     );
   }
 
-  // optional future use:
-  static fetchAll() {
-    return db.execute('SELECT * FROM org_suggestions ORDER BY id DESC');
-  }
+  static fetchLatest() {
+  return db.execute(
+    `SELECT orgName, category
+     FROM org_suggestions
+     ORDER BY suggestionId DESC
+     LIMIT 8`
+  );
+}
+
 };

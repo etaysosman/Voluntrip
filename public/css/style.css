@@ -283,7 +283,6 @@ aside {
     opacity: 1;
 }
 
-
 /* ================= ABOUT PAGE ================= */
 
 .about-hero{
@@ -596,8 +595,8 @@ aside {
 
   /* optional: hide Logout text on small screens (keeps icon) */
   .vt-nav__logout {
-    padding: 8px 10px;
+    padding: 10px 10px;
+
   }
 }
-
 
