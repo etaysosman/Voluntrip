@@ -4,7 +4,6 @@ const express = require('express');
 const path = require('path');
 
 const homeRoutes = require('./routes/home');
-const activitiesRoutes = require('./routes/activities');
 const reviewsRoutes = require('./routes/reviews');
 const applyRoutes = require('./routes/apply');
 const usersRoutes = require('./routes/users');
@@ -24,7 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 app.use(usersRoutes);
 app.use(homeRoutes);
-app.use(activitiesRoutes);
 app.use(reviewsRoutes);
 app.use(applyRoutes);
 
