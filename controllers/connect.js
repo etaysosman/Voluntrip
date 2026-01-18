@@ -10,7 +10,7 @@ exports.getConnect = (req, res) => {
     .catch(err => {
       console.log(err);
       res.render('connect', {
-        suggestions: []
+        suggestions: [],
       });
     });
 };
@@ -29,11 +29,11 @@ exports.postConnect = (req, res) => {
 
   suggestion.save()
     .then(() => {
-      console.log("Suggestion Sent")
-      res.redirect('/connect');
+      console.log("Suggestion Saved Successfully!");
+      res.redirect('/connect'); 
     })
     .catch(err => {
-      console.log(err);
-      res.status(500).send('Server error');
+      console.log("Error saving suggestion:", err);
+      res.status(500).send('Server error during save');
     });
 };

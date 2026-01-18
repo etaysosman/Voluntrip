@@ -1,28 +1,52 @@
     const path = require('path');
     const Review = require('../models/review');
+    const Activity = require('../models/activity');
 
 
-    exports.getHome = (req, res) => {
-        res.render('home');
-    }
+        exports.getHome = (req, res) => {
+            res.render('home');
+        }
 
-    exports.getExplore = (req, res) => {
-        res.render('explore');
-    }
+        exports.getReviews = (req, res) => {
+            res.render('reviews');
+        }
 
-    exports.getReviews = (req, res) => {
-        res.render('reviews');
-    }
+        exports.getStart = (req, res) => {
+            res.render('index');
+            
+        }
 
-    exports.getStart = (req, res) => {
-        res.render('index');
-        
-    }
+        // GET: /explore
+            exports.getExplore = (req, res, next) => {
+            Activity.fetchAll()
+                .then(([rows]) => {
+                    res.render('explore', {
+                        activities: rows,
+                        isFiltered: false
+                    });
+                })
+                .catch(err => console.log(err));
+        };
+
+        // POST: /explore (סינון)
+        exports.postExplore = (req, res, next) => {
+            const filters = {
+                category: req.body.category,
+                location: req.body.location
+            };
+
+                Activity.filter(filters)
+                    .then(([rows]) => {
+                        res.render('explore', {
+                            activities: rows,
+                            isFiltered: true // מציג כפתור "נקה סינון" 
+                        });
+                    })
+                    .catch(err => console.log(err));
+            };
 
     
-    //exports.getAbout = (req, res) => {
-     //   res.render('about');
-    //}
+
 
     exports.getAbout = (req, res) => {
         Review.fetchLatest()
