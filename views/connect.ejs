@@ -1,0 +1,209 @@
+<%- include('includes/head') %>
+
+<link rel="stylesheet" href="/css/connect.css">
+
+<title>Let&#39;s Connect | VolunTrip</title>
+</head>
+
+<body>
+
+<%- include('includes/menu') %>
+
+<main class="container py-5">
+
+  <!-- HEADER -->
+  <header class="lc-hero">
+    <div class="lc-center text-center">
+      <h1 id="lc-title" class="lc-title">Let’s Connect</h1>
+
+      <p class="lc-lead">
+        Know an organization that should be part of VolunTrip? Suggest it here.
+        We review every request and contact the organization if it matches our standards.
+      </p>
+
+      <section class="lc-highlights">
+        <div class="lc-highlight">
+          <i class="bi bi-shield-check"></i>
+          <div>
+            <strong>Safety & Transparency</strong>
+            <div class="small text-muted">Clear expectations, real contact details, and verified activity.</div>
+          </div>
+        </div>
+
+        <div class="lc-highlight">
+          <i class="bi bi-heart-pulse"></i>
+          <div>
+            <strong>Meaningful Impact</strong>
+            <div class="small text-muted">Work that helps communities, animals, education, or the environment.</div>
+          </div>
+        </div>
+
+        <div class="lc-highlight">
+          <i class="bi bi-people"></i>
+          <div>
+            <strong>Community Fit</strong>
+            <div class="small text-muted">Welcoming volunteers and supporting them properly.</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="mt-4 d-flex gap-2 flex-wrap justify-content-center">
+        <a class="btn btn-outline-primary" href="#lc-form">
+          <i class="bi bi-pencil-square"></i> Suggest an organization
+        </a>
+        <a class="btn btn-outline-primary" href="#lc-faq">
+          <i class="bi bi-question-circle"></i> Read FAQ
+        </a>
+      </div>
+    </div>
+  </header>
+
+    <!-- SECTION: OUR RECENTLY SUGGESTED -->
+  <section class="lc-suggested mt-4">
+    <div class="lc-center">
+      <h2 class="lc-suggested__title text-center mb-3">OUR RECENTLY SUGGESTED</h2>
+
+      <% if (suggestions && suggestions.length > 0) { %>
+        <div class="row g-3 justify-content-center">
+          <% for (let i = 0; i < suggestions.length; i++) { %>
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="lc-suggested-card">
+                <div class="lc-suggested-name"><%= suggestions[i].orgName %></div>
+                <div class="lc-suggested-cat">
+                  <i class="bi bi-tags"></i>
+                  <span><%= suggestions[i].category %></span>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      <% } else { %>
+        <div class="text-center text-muted">
+          No suggestions yet - be the first to add one!
+        </div>
+      <% } %>
+    </div>
+  </section>
+
+
+  <!-- SECTION: FORM (Image left + Form right, same height) -->
+  <section id="lc-form" class="lc-form mt-4">
+    <div class="row g-4 align-items-stretch justify-content-center">
+
+      <!-- LEFT: Image -->
+      <figure class="col-lg-4 col-md-10">
+        <div class="lc-media h-100">
+          <img class="lc-img" src="/images/VOL5.JPG" alt="VolunTrip volunteering" loading="lazy">
+        </div>
+      </figure>
+
+      <!-- RIGHT: Form -->
+      <article class="col-lg-8 col-md-10">
+        <div class="lc-card h-100">
+          <h2 id="lc-form-title" class="mb-3 text-center">Suggest an organization</h2>
+
+          <form method="POST" action="/connect" novalidate>
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label for="orgName" class="form-label lc-label">Organization name</label>
+                <input type="text" class="form-control lc-input" id="orgName" name="orgName" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="contactPhone" class="form-label lc-label">Contact phone</label>
+                <input type="tel" class="form-control lc-input" id="contactPhone" name="contactPhone" placeholder="+972..." required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="socialLink" class="form-label lc-label">Social link (optional)</label>
+                <input type="url" class="form-control lc-input" id="socialLink" name="socialLink" placeholder="https://instagram.com/...">
+              </div>
+
+              <div class="col-md-6">
+                <label for="category" class="form-label lc-label">Main volunteering category</label>
+                <select class="form-select lc-input" id="category" name="category" required>
+                  <option value="" selected disabled>Choose one…</option>
+                  <option value="animals">Animals</option>
+                  <option value="education">Education</option>
+                  <option value="environment">Environment / Cleanup</option>
+                  <option value="community">Community</option>
+                  <option value="farming">Farming</option>
+                  <option value="healthcare">Healthcare</option>
+                </select>
+              </div>
+
+              <!-- FIXED checkbox alignment -->
+              <div class="col-12">
+                <div class="lc-check">
+                  <input class="form-check-input lc-check__box" type="checkbox" id="volunteeredBefore" name="volunteeredBefore" value="1">
+                  <label class="form-check-label lc-check__label" for="volunteeredBefore">
+                    I volunteered in this organization before
+                  </label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="details" class="form-label lc-label">Extra details</label>
+                <textarea class="form-control lc-input" id="details" name="details" rows="5"
+                  placeholder="Tell us what they do, location, requirements, why it’s a good fit..."></textarea>
+              </div>
+
+              <div class="col-12 d-flex gap-2 flex-wrap mt-2 justify-content-center">
+                <button type="submit" class="btn btn-primary lc-btn">
+                  <i class="bi bi-send"></i> Submit suggestion
+                </button>
+
+                <button type="reset" class="btn btn-outline-primary lc-btn">
+                  <i class="bi bi-arrow-counterclockwise"></i> Reset
+                </button>
+              </div>
+
+              <div class="col-12">
+                <div class="lc-hint small text-muted text-center">
+                  By submitting, you confirm the details are accurate to the best of your knowledge.
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- SECTION: FAQ -->
+  <section id="lc-faq" class="lc-faq mt-4">
+    <h2 id="lc-faq-title" class="text-center mb-4">FAQ</h2>
+
+    <div class="lc-faq-list lc-center">
+      <details>
+        <summary>How long does review take?</summary>
+        <div class="lc-faq-body">
+          Usually 2–7 days. If we need more details, we’ll reach out.
+        </div>
+      </details>
+
+      <details>
+        <summary>Do you add every organization?</summary>
+        <div class="lc-faq-body">
+          Not always. We only add organizations that match our standards and can support volunteers safely.
+        </div>
+      </details>
+
+      <details>
+        <summary>Will I get a response?</summary>
+        <div class="lc-faq-body">
+          If you provided enough details, we can follow up through your contact phone/social link if needed.
+        </div>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<%- include('includes/end') %>

@@ -1,0 +1,178 @@
+<%- include('includes/head') %>
+
+<link rel="stylesheet" href="/css/reviews.css">
+
+<title>Reviews | VolunTrip</title>
+</head>
+
+<body>
+
+<%- include('includes/menu') %>
+
+<main class="container py-5">
+
+  <!-- HEADER -->
+  <header class="rv-hero">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-8">
+        <h1 class="rv-title">Volunteer Reviews</h1>
+        <p class="rv-lead">
+          Share your experience to help other volunteers choose the right opportunity.
+        </p>
+
+        <div class="rv-badges">
+          <span class="rv-badge"><i class="bi bi-stars"></i> Real experiences</span>
+          <span class="rv-badge"><i class="bi bi-geo-alt"></i> Global locations</span>
+          <span class="rv-badge"><i class="bi bi-shield-check"></i> Community-driven</span>
+        </div>
+      </div>
+
+      <aside class="col-lg-4">
+        <div class="rv-side">
+          <h2 class="h6 mb-2"><i class="bi bi-info-circle"></i> Quick tips</h2>
+          <ul class="rv-list">
+            <li>Keep it honest and respectful.</li>
+            <li>Mention what you actually did and for how long.</li>
+            <li>Add a helpful detail others can use.</li>
+          </ul>
+
+          <div class="rv-mini">
+            <div class="rv-mini__item">
+              <i class="bi bi-clock-history"></i>
+              <div>
+                <strong>1 minute</strong>
+                <div class="small text-muted">to submit a review</div>
+              </div>
+            </div>
+
+            <div class="rv-mini__item">
+              <i class="bi bi-people"></i>
+              <div>
+                <strong>Helps others</strong>
+                <div class="small text-muted">find a good match</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <!-- SECTION: FORM + PREVIEW -->
+  <section class="rv-form mt-4">
+    <div class="row g-4 align-items-stretch">
+
+      <!-- FORM -->
+      <article class="col-lg-12">
+        <div class="rv-card">
+          <h2 class="rv-card__title">Submit a review</h2>
+
+          <form method="POST" action="/reviews" class="rv-form__grid">
+            <div class="row g-3">
+
+              <div class="col-md-6">
+                <label for="volunteerName" class="form-label rv-label">Volunteer name</label>
+                <input type="text" class="form-control rv-input" id="volunteerName" name="volunteerName" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="location" class="form-label rv-label">Volunteer location</label>
+                <input type="text" class="form-control rv-input" id="location" name="location" placeholder="e.g., Thailand" required>
+              </div>
+
+              <div class="col-md-6">
+                <label for="category" class="form-label rv-label">Volunteering category</label>
+                <select class="form-select rv-input" id="category" name="category" required>
+                  <option value="" selected disabled>Choose one…</option>
+                  <option value="animals">Animals</option>
+                  <option value="education">Education</option>
+                  <option value="environment">Environment / Cleanup</option>
+                  <option value="community">Community</option>
+                  <option value="farming">Farming</option>
+                  <option value="healthcare">Healthcare</option>
+                </select>
+              </div>
+
+              <div class="col-md-6">
+                <label for="daysVolunteered" class="form-label rv-label">Days volunteered</label>
+                <input type="number" class="form-control rv-input" id="daysVolunteered" name="daysVolunteered" min="1" max="365" placeholder="e.g., 14" required>
+              </div>
+
+               <div class="col-12">
+          <label class="form-label rv-label">Rating</label>
+
+          <div class="rv-rating-simple">
+            <div class="rv-rating-options">
+              <label class="rv-rate">
+                <input type="radio" name="rating" value="1" required>
+                <span class="rv-rate__num">1</span>
+                <i class="bi bi-star-fill"></i>
+              </label>
+
+              <label class="rv-rate">
+                <input type="radio" name="rating" value="2">
+                <span class="rv-rate__num">2</span>
+                <i class="bi bi-star-fill"></i>
+              </label>
+
+              <label class="rv-rate">
+                <input type="radio" name="rating" value="3">
+                <span class="rv-rate__num">3</span>
+                <i class="bi bi-star-fill"></i>
+              </label>
+
+              <label class="rv-rate">
+                <input type="radio" name="rating" value="4">
+                <span class="rv-rate__num">4</span>
+                <i class="bi bi-star-fill"></i>
+              </label>
+
+              <label class="rv-rate">
+                <input type="radio" name="rating" value="5">
+                <span class="rv-rate__num">5</span>
+                <i class="bi bi-star-fill"></i>
+              </label>
+            </div>
+
+            <div class="rv-rating-hint small text-muted">
+              Choose 1 (low) to 5 (excellent).
+            </div>
+          </div>
+        </div>
+
+              <div class="col-12">
+                <label for="description" class="form-label rv-label">General description</label>
+                <textarea class="form-control rv-input" id="description" name="description" rows="5"
+                  placeholder="What did you do? What was great? Any tips for future volunteers?" required></textarea>
+              </div>
+
+              <div class="col-12 gap-2 flex-wrap mt-4">
+                <button type="submit" class="btn btn-primary rv-btn">
+                  <i class="bi bi-send"></i> Submit
+                </button>
+
+                <button type="reset" class="btn btn-outline-primary rv-btn" id="rvReset">
+                  <i class="bi bi-arrow-counterclockwise"></i> Reset
+                </button>
+              </div>
+
+              <div class="col-12">
+                <div class="small text-muted">
+                  Your review will be used to display Testimonials in the About page.
+                </div>
+              </div>
+
+            </div>
+          </form>
+        </div>
+      </article>
+
+      
+
+  <script>
+    
+  </script>
+
+</main>
+
+<%- include('includes/end') %>

@@ -1,0 +1,102 @@
+<%- include('includes/head') %>
+<link rel="stylesheet" href="/css/explore.css">
+<title>Explore Missions | VolunTrip</title>
+</head>
+
+<body>
+
+<%- include('includes/menu') %>
+
+<header class="ex-header-strip">
+  <div class="container">
+    <h1 class="ex-main-title">Global Opportunities</h1>
+    <p class="ex-sub-title">Find your next volunteering journey.</p>
+  </div>
+</header>
+
+<main class="container my-5">
+  <div class="row">
+    
+    <aside class="col-lg-3 mb-4">
+      <div class="ex-filter-box">
+        <h4 class="ex-filter-title"><i class="bi bi-sliders"></i> Filter Results</h4>
+        
+        <form action="/explore" method="POST">
+          <div class="mb-3">
+            <label class="form-label ex-label">Category</label>
+            <select class="form-select ex-input" name="category">
+              <option value="all">All Categories</option>
+              <option value="Animals">Animals</option>
+              <option value="Education">Education</option>
+              <option value="Environment">Environment</option>
+              <option value="Healthcare">Healthcare</option>
+            </select>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label ex-label">Location</label>
+            <input type="text" class="form-control ex-input" name="location" placeholder="e.g. Vietnam">
+          </div>
+
+          <button type="submit" class="btn btn-primary ex-btn-submit w-100">Apply Filters</button>
+          
+          <% if (isFiltered) { %>
+            <a href="/explore" class="btn btn-outline-secondary w-100 mt-2 btn-sm">Clear Filters</a>
+          <% } %>
+        </form>
+      </div>
+    </aside>
+
+    <section class="col-lg-9">
+      <% if (activities.length > 0) { %>
+        <div class="d-flex flex-column gap-3">
+          <% for (let act of activities) { %>
+            
+            <article class="ex-card-horizontal">
+              <div class="row g-0 h-100">
+                <div class="col-md-4">
+                  <div class="ex-img-wrap">
+                    <img src="<%= act.imageUrl %>" alt="<%= act.title %>" loading="lazy">
+                    <span class="ex-badge-cat"><%= act.category %></span>
+                  </div>
+                </div>
+                <div class="col-md-8">
+                  <div class="ex-card-body">
+                    <div class="d-flex justify-content-between align-items-start">
+                      <h3 class="ex-card-title"><%= act.title %></h3>
+                      <span class="ex-duration"><i class="bi bi-clock-history"></i> <%= act.daysDuration %> Days</span>
+                    </div>
+
+                    <div class="ex-organizer">
+                      <i class="bi bi-building"></i> <strong><%= act.organizer %></strong> &bull; <%= act.location %>
+                    </div>
+
+                    <p class="ex-desc"><%= act.description.substring(0, 120) %>...</p>
+
+                    <div class="ex-card-footer">
+                      <% if (act.socialLink) { %>
+                        <a href="<%= act.socialLink %>" target="_blank" class="ex-social-link"><i class="bi bi-instagram"></i> Social</a>
+                      <% } else { %> <span></span> <% } %>
+                      
+                      <a href="/apply/<%= act.activityId %>" class="btn btn-primary ex-btn-view">
+                        Apply Now <i class="bi bi-arrow-right-short"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          <% } %>
+        </div>
+      <% } else { %>
+        <div class="alert alert-light text-center border p-5">
+          <h3>No matches found</h3>
+          <p>Try adjusting your filters to see more results.</p>
+        </div>
+      <% } %>
+    </section>
+  </div>
+</main>
+
+<%- include('includes/end') %>

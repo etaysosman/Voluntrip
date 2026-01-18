@@ -1,0 +1,265 @@
+<%- include('includes/head.ejs') %>
+    <title>Home | VolunTrip</title>
+</head>
+
+<body>
+
+<%- include('includes/menu.ejs') %>
+
+<!-- HEADER: Hero section with main page title -->
+<header class="hero">
+    <div class="container">
+        <h1 class="main-title">
+            Welc<img src="images/earth-logo.png" class="logo-icon" alt="o">me to VolunTrip
+        </h1>
+
+        <p class="hero-subtitle">
+            <!-- MARK: Highlighted keyword for emphasis -->
+            Travel with <mark>purpose</mark>. Volunteer with impact.
+        </p>
+
+        <!-- DIV: Hero CTA buttons -->
+        <div class="hero-cta">
+            <a class="btn btn-primary btn-lg" href="/explore">
+                <i class="bi bi-compass"></i> Explore Activities
+            </a>
+
+            <a class="btn btn-outline-primary btn-lg" href="#impact">
+                <i class="bi bi-bar-chart-line"></i> See Our Impact
+            </a>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN: Primary content container -->
+<main class="container flex-grow-1">
+
+    <!-- SECTION: Volunteering activities showcase -->
+    <section id="top-activities">
+        
+        <div class="row g-4" id="activitiesGrid">
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3" data-category="education">
+                <div class="activity">
+                    <i class="bi bi-book"></i>
+                    <h5>Education</h5>
+                    <p>Teach and empower communities worldwide.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3" data-category="environment">
+                <div class="activity">
+                    <i class="bi bi-tree"></i>
+                    <h5>Environment</h5>
+                    <p>Protect nature and wildlife.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3" data-category="healthcare">
+                <div class="activity">
+                    <i class="bi bi-heart-pulse"></i>
+                    <h5>Healthcare</h5>
+                    <p>Support health initiatives globally.</p>
+                </div>
+            </article>
+
+            <!-- ARTICLE: Self-contained activity card -->
+            <article class="col-md-3" data-category="community">
+                <div class="activity">
+                    <i class="bi bi-people"></i>
+                    <h5>Community</h5>
+                    <p>Build stronger local communities.</p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- SECTION: Volunteering-related images gallery -->
+    <section class="nature">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <figure class="m-0">
+                    <img src="images/animals.png" alt="animal care">
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="m-0">
+                    <img src="images/food.png" alt="food distribution">
+                </figure>
+            </div>
+            <div class="col-md-4">
+                <figure class="m-0">
+                    <img src="images/sea.png" alt="beach cleanup">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Media (Video + Audio) -->
+    <section class="media-section" >
+        <div class="row g-4 align-items-stretch">
+            <div class="col-lg-8">
+                <h2 id="media-title" class="mb-3 section-title">See VolunTrip in Action</h2>
+
+                <!-- FIGURE: video -->
+                <figure class="media-box">
+                    <video controls preload="metadata" class="w-100" poster="images/poster.png">
+                        <source src="/media/voluntrip2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </figure>
+            </div>
+
+            <aside class="col-lg-4 sidebar" >
+             
+                <h3 class="mb-3 section-title">Recommended Podcast</h3>
+                <div class="audio-card mt-3">
+                    <iframe data-testid="embed-iframe" style="border-radius:12px"
+                     src="https://open.spotify.com/embed/show/5ygcbuT2Q3ZWMqF8wHawzN?utm_source=generator"
+                     width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay;
+                     clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
+                
+            </aside>
+        </div>
+    </section>
+
+    <!-- SECTION: Impact statistics display -->
+    <section id="impact" class="statistics text-center">
+        <h2 id="impact-title" class="mb-4 section-title">Our Impact</h2>
+
+        <div class="row">
+            <div class="col-md-4">
+                <h3 class="counter" data-target="42">42+</h3>
+                <p>Countries</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="counter" data-target="12000">12,000+</h3>
+                <p>Active Volunteers</p>
+            </div>
+            <div class="col-md-4">
+                <h3 class="counter" data-target="350000">350,000+</h3>
+                <p>Impact Points</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Two-column content with ASIDE -->
+    <section class="about-split">
+        <div class="row g-4 align-items-start">
+            <div class="col-lg-7">
+                <article class="content-card">
+                    <h3 class="mb-3">What makes us DIFFERENT</h3>
+                    <p class="mb-0">
+                    VolunTrip goes beyond being just a booking platform; we are a community driven by
+                    genuine purpose and <strong>sustainable impact</strong>.
+                    Unlike standard travel agencies, we prioritize long-term community growth over simple
+                    sightseeing, ensuring that every project is designed to leave a positive, lasting legacy.
+                    <br><br>
+                    What truly sets us apart is our <strong>rigorous vetting process</strong> and
+                    unwavering support system. We personally verify every host organization to guarantee
+                    safety, transparency, and ethical standards, while our dedicated team provides
+                    24/7 assistance to guide you through every step of your journey.
+                    <br><br>
+                    We don't just facilitate trips; we build <strong>bridges between cultures</strong>.
+                    By focusing on authentic immersion rather than mere tourism, we offer a transformative
+                    experience that changes not only the destination but also the traveler.
+                    Choose a path that matters and travel with purpose.
+                    <br><br>
+                    Join VolunTrip, where your adventure becomes a force for good.
+                    Immerse yourself in the local culture, work alongside passionate locals, and see the
+                     results of your efforts firsthand.
+                    <br>
+                    <br>
+                    </p>
+                </article>
+            </div>
+
+            <!-- ASIDE: Supplementary information about VolunTrip -->
+            <aside class="col-lg-5">
+                <h3 class="mb-3">Why VolunTrip?</h3>
+                <p>
+                    VolunTrip connects travelers with meaningful volunteer opportunities across the globe,
+                    helping them create <strong>real social impact</strong> while discovering new cultures.
+                    We believe that every journey can be more than just a trip - it can be a chance to make a
+                    difference, meet inspiring people, and contribute to communities in need.
+                    <br><br>
+                    Our platform allows volunteers to join projects in education, environmental care,
+                    healthcare assistance and community support. With guidance, personalized matching
+                    and verified organizations worldwide, we make volunteering safe, accessible and
+                    meaningful for everyone.
+                    <br><br>
+                    Whether you are traveling alone, with friends or as part of a group - VolunTrip turns your experience
+                    into something unforgettable. Pack your backpack, open your heart, and start changing the world - one trip at a time.
+                </p>
+            </aside>
+        </div>
+    </section>
+    
+
+    <!-- SECTION: Partner organizations showcase -->
+    <section class="partners text-center">
+        <h3 class="mb-4 section-title">Our Partners</h3>
+
+        <div class="row justify-content-center g-4">
+            <div class="col-6 col-md-3">
+                <img src="/images/vol1.png" alt="VOL1">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="/images/vol2.png" alt="VOL2">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="/images/vol3.png" alt="VOL3">
+            </div>
+            <div class="col-6 col-md-3">
+                <img src="/images/vol4.png" alt="VOL4">
+            </div>
+        </div>
+    </section>
+
+    <!-- JS -->
+    <script>
+        // ---- Animated counters ---- //
+        const counters = document.querySelectorAll('.counter');
+
+        function animateCounter(el) {
+            const target = Number(el.dataset.target || 0);
+            const duration = 900;
+            const start = 0;
+            const startTime = performance.now();
+
+            function tick(now) {
+                const progress = Math.min((now - startTime) / duration, 1);
+                const value = Math.floor(start + (target - start) * progress);
+
+                // formatting
+                el.textContent = (target >= 1000) ? value.toLocaleString() + '+' : value + '+';
+
+                if (progress < 1) requestAnimationFrame(tick);
+            }
+
+            requestAnimationFrame(tick);
+        }
+
+        // run counters when impact section is visible
+        const impactSection = document.getElementById('impact');
+        const io = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    counters.forEach(animateCounter);
+                    io.disconnect();
+                }
+            });
+        }, { threshold: 0.3 });
+
+        io.observe(impactSection);
+
+    </script>
+
+</main>
+
+<%- include('includes/end.ejs') %>
