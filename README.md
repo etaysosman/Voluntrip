@@ -8,6 +8,12 @@ Before ruuning please run the following commands:
 npm install --save express
 npm install --save mysql2
 npm install --save ejs
+npm install --save bcryptjs
+npm install --save express-session 
+
+
+
+
 ## 📋 Table of Contents
 - [About VolunTrip](#about-voluntrip)
 - [Website Structure](#website-structure)
