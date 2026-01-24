@@ -1,6 +1,10 @@
-// app.js
-// app.js
 const express = require('express');
+const session = require('express-session');
+//app.use(session({
+  //  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+  //  saveUninitialized:false,
+  //  resave: false
+//}));
 const path = require('path');
 
 const homeRoutes = require('./routes/home');
@@ -26,12 +30,6 @@ app.use(homeRoutes);
 app.use(reviewsRoutes);
 app.use(applyRoutes);
 
-
-
-//always last - 404 page not found
-app.use((req, res) => {
-  res.status(404).render('file_not_found');
-});
 
 app.listen(3000, () => {
   console.log('Server running on http://localhost:3000');
