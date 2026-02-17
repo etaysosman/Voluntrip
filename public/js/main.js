@@ -1,29 +1,58 @@
+
+//JQUERY FOR HOMEPAGE
+
+
+$(document).ready(function() {
+    if ($('.main-title').length) {
+        $('.main-title, .hero-subtitle').hide();
+        $('.main-title').fadeIn(4000).slideDown(500);
+        $('.hero-subtitle').delay(2000).fadeIn(1000);
+    }
+});
+
+
+
+
+//DARK AND LIGHT MODE MENU
+
 document.addEventListener('DOMContentLoaded', function() {
 
+    // Select the toggle button and the menu
     let btn = document.getElementById('darkModeBtn');
     let nav = document.getElementById('mainMenu');
 
+    // Only run if elements exist on the current page
     if (btn && nav) {
+        
+        // Check saved preference on load
         if (localStorage.getItem('isDarkMode') === 'true') {
             nav.classList.add('nav-dark-mode');
             btn.innerHTML = '<i class="bi bi-sun"></i> Light Menu';
             btn.style.color = '#ffc107';
         }
 
+        // Handle toggle click
         btn.addEventListener('click', function() {
             nav.classList.toggle('nav-dark-mode');
 
+            // Update UI and save preference
             if (nav.classList.contains('nav-dark-mode')) {
+                // Switched to Dark Mode
                 this.innerHTML = '<i class="bi bi-sun"></i> Light Menu';
                 this.style.color = '#ffc107';
                 localStorage.setItem('isDarkMode', 'true');
             } else {
+                // Switched back to Light Mode
                 this.innerHTML = '<i class="bi bi-moon"></i> Dark Menu';
                 this.style.color = '';
                 localStorage.setItem('isDarkMode', 'false');
             }
         });
     }
+});
+
+
+//IMACT STATISTICS HOMEPAGE
 
     const impactSection = document.getElementById('impact');
 
@@ -59,12 +88,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
         io.observe(impactSection);
     }
-});
 
-$(document).ready(function() {
-    if ($('.main-title').length) {
-        $('.main-title, .hero-subtitle').hide();
-        $('.main-title').fadeIn(4000).slideDown(500);
-        $('.hero-subtitle').delay(2000).fadeIn(1000);
-    }
-});
+
