@@ -1,10 +1,6 @@
 const express = require('express');
 const session = require('express-session');
-//app.use(session({
-  //  secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
-  //  saveUninitialized:false,
-  //  resave: false
-//}));
+
 const path = require('path');
 
 const homeRoutes = require('./routes/home');
@@ -13,6 +9,12 @@ const applyRoutes = require('./routes/apply');
 const usersRoutes = require('./routes/users');
 
 const app = express();
+
+app.use(session({
+    secret: "thisismysecrctekeyfhrgfgrfrty84fwir767",
+    saveUninitialized:false,
+    resave: false
+}));
 
 //Tell Express to use EJS
 app.set('views', path.join(__dirname, 'views'));
