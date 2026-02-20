@@ -1,135 +1,231 @@
 # 🌍 VolunTrip
 
-VolunTrip is an innovative web platform designed to connect users with meaningful volunteer opportunities around the world.  
-Its mission is to make international volunteering **accessible, simple, and impactful** by helping users discover, explore, and register for global volunteer activities.
+VolunTrip is an innovative web platform designed to connect users with meaningful volunteer opportunities around the world.
 
----
-Before ruuning please run the following commands:
-- npm install --save express
-- npm install --save mysql2
-- npm install --save ejs
-- npm install --save bcryptjs
-- npm install --save express-session 
-
-
-
-## 📋 Table of Contents
-- [About VolunTrip](#about-voluntrip)
-- [Website Structure](#website-structure)
-  - [Home Page](#home-page)
-  - [Explore Activities](#explore-activities)
-  - [Activity Details](#activity-details)
-  - [Apply for Activities](#apply-for-activities)
-  - [About Page](#about-page)
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation & Setup](#installation--setup)
-- [Folder Structure](#folder-structure)
-- [Contact](#contact)
+Its mission is to make international volunteering accessible, simple, and impactful by enabling users to discover, explore, and apply for global volunteer activities.
 
 ---
 
-## 📖 About VolunTrip
+# 📋 Table of Contents
 
-VolunTrip is **not a travel agency** — it is a dynamic technological platform that bridges the gap between volunteers and non-profit organizations worldwide.
+* About VolunTrip
+* Website Structure
+* Features
+* Tech Stack
+* Installation & Setup
+* Routes Overview
+* Project Structure
+
+---
+
+# 📖 About VolunTrip
+
+VolunTrip is not a travel agency — it is a dynamic technology platform that bridges volunteers and organizations worldwide.
 
 Users can:
-- Search for volunteer programs  
-- Filter by their interests, field, location, or duration  
-- Read detailed descriptions  
-- Register directly online  
 
-VolunTrip’s mission is to empower volunteers and organizations by creating a centralized, easy-to-use hub for meaningful global impact.
-
----
-
-## 🧭 Website Structure
-
-### **1. Home Page**
-- Presents VolunTrip’s mission and value.
-- Displays a welcome section and featured volunteer activities.
-- Shows statistics such as:
-  - Number of active projects
-  - Total registered volunteers
-  - Highlighted impact metrics
+* Create an account and log in securely
+* Browse volunteer opportunities
+* Filter activities by category and location
+* Apply directly through an online form
+* Share reviews from their volunteering experience
+* Suggest organizations to join the platform
 
 ---
 
-### **2. Explore Activities**
-- Full browsing experience of all available opportunities.
-- Each activity card displays:
-  - Name  
-  - Field  
-  - Location  
-  - Organizer  
-- Users can filter activities by:
-  - Field of volunteering  
-  - Location  
-  - Organization  
+# 🧭 Website Structure
+
+1. Landing Page (/)
+   Public welcome page introducing the platform and its mission.
+
+2. Authentication (/register, /login, /logout)
+
+* Registration with validation
+* Duplicate checks for ID, email, and username
+* Password hashing using bcryptjs
+* Session-based authentication using express-session
+
+3. Home (/home)
+   Main dashboard available after login.
+
+4. Explore Activities (/explore)
+
+* Displays activities stored in MySQL
+* Shows total number of applications submitted
+* Supports filtering by category and location
+* Includes form to publish a new activity
+
+5. Apply for Activities (/apply/:activityId)
+
+* Activity-specific application form
+* Captures:
+
+  * Start date
+  * Duration
+  * Language preference
+  * Physical work preference
+  * Motivation
+  * Terms agreement
+
+6. Reviews (/reviews)
+
+* Logged-in users can submit volunteer reviews
+* Latest reviews are displayed on the About page
+
+7. About (/about)
+
+* Platform story
+* FAQ
+* Social links
+* Testimonials fetched dynamically from recent reviews
+
+8. Connect (/connect)
+
+* Suggest organizations to join VolunTrip
+* Displays recently suggested organizations
+
+9. 404 Page
+   Unknown routes render a custom file_not_found page.
 
 ---
 
-### **3. Activity Details**
-Each activity includes:
-- Full description & goals  
-- Location & organizer info  
-- Registration requirements  
-- Impact points  
-- List of registered participants  
-- A **Register Now** button for immediate sign-up  
+# ⭐ Features
+
+* Authentication-protected user experience
+* Volunteer activity discovery and filtering
+* Activity publishing workflow
+* Online volunteer application system
+* Volunteer review submission and testimonial display
+* Organization suggestion flow ("Let's Connect")
+* Server-side rendering using EJS templates
+* MVC-like folder structure
 
 ---
 
-### **4. Apply for Activities**
-- Users complete a registration form with:
-  - Name, phone, email, etc.  
-  - Optional required documents (passport scan, etc.)  
-- After submission, users receive **instant confirmation**.
+# 🛠 Tech Stack
+
+* Node.js
+* Express
+* EJS
+* MySQL (mysql2)
+* bcryptjs
+* express-session
+* HTML / CSS / JavaScript
 
 ---
 
-### **5. About Page**
-- Explains the value VolunTrip provides to both volunteers and organizations.
-- May include:
-  - Statistics  
-  - Success stories  
-  - Testimonials  
-  - Partner organizations  
+# 🚀 Installation & Setup
 
----
+1. Clone the Repository
 
-## ⭐ Features
-- Global volunteer activity discovery  
-- Smart filtering (field, location, organization)  
-- Detailed activity pages  
-- Online registration & confirmation  
-- Impact point system  
-- Easy-to-navigate interface  
-- Strengthening organizational–volunteer networks  
-
----
-
-## 🛠 Tech Stack
-*(Adjust according to your project — add/remove as needed)*
-
-- **HTML / CSS / JavaScript**
-- **Node.js / Express** 
-- ** MySQL** (if database included)
-- **EJS**
-
----
-
-## 🚀 Installation & Setup
-
-```bash
-# Clone the repository
-git clone https://github.com/etaysosman/Voluntrip.git
-
-# Enter the project directory
+git clone [https://github.com/etaysosman/Voluntrip.git](https://github.com/etaysosman/Voluntrip.git)
 cd Voluntrip
 
-# Install dependencies
+2. Install Dependencies
+
 npm install
 
-# Start the server
-npm start
+If needed manually:
+
+npm install express mysql2 ejs bcryptjs express-session
+
+3. Configure MySQL
+
+Update database credentials inside:
+util/database.js
+
+Make sure the following fields are correct:
+
+* host
+* user
+* password
+* database (default in project: voluntrip)
+
+4. Run the Server
+
+node app.js
+
+Server will run at:
+[http://localhost:3000](http://localhost:3000)
+
+---
+
+# 🛣 Routes Overview
+
+Public Routes:
+
+GET /
+GET /register
+POST /register
+GET /login
+POST /login
+
+Authentication Required:
+
+POST /logout
+GET /home
+GET /about
+GET /explore
+POST /explore
+GET /apply/:activityId
+POST /apply
+POST /addActivity
+GET /reviews
+POST /reviews
+GET /connect
+POST /connect
+
+---
+
+# 📁 Project Structure
+
+Voluntrip/
+│
+├── app.js
+├── package.json
+├── README.md
+│
+├── controllers/
+│   ├── apply.js
+│   ├── connect.js
+│   ├── home.js
+│   ├── reviews.js
+│   └── users.js
+│
+├── models/
+│   ├── activity.js
+│   ├── apply.js
+│   ├── connect.js
+│   ├── review.js
+│   └── users.js
+│
+├── routes/
+│   ├── apply.js
+│   ├── home.js
+│   ├── reviews.js
+│   └── users.js
+│
+├── util/
+│   ├── database.js
+│   └── is_auth.js
+│
+├── public/
+│   ├── css/
+│   ├── images/
+│   ├── js/
+│   └── media/
+│
+└── views/
+├── about.ejs
+├── apply.ejs
+├── connect.ejs
+├── explore.ejs
+├── file_not_found.ejs
+├── home.ejs
+├── index.ejs
+├── login.ejs
+├── register.ejs
+├── reviews.ejs
+└── includes/
+
+---
