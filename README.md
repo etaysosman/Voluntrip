@@ -152,33 +152,38 @@ Server will run at:
 
 # 🛣 Routes Overview
 
-Public Routes:
+## Public Routes
 
-GET /
-GET /register
-POST /register
-GET /login
-POST /login
+```
+GET    /
+GET    /register
+POST   /register
+GET    /login
+POST   /login
+```
 
-Authentication Required:
+## Authentication Required
 
-POST /logout
-GET /home
-GET /about
-GET /explore
-POST /explore
-GET /apply/:activityId
-POST /apply
-POST /addActivity
-GET /reviews
-POST /reviews
-GET /connect
-POST /connect
+```
+POST   /logout
+GET    /home
+GET    /about
+GET    /explore
+POST   /explore
+GET    /apply/:activityId
+POST   /apply
+POST   /addActivity
+GET    /reviews
+POST   /reviews
+GET    /connect
+POST   /connect
+```
 
 ---
 
 # 📁 Project Structure
 
+```
 Voluntrip/
 │
 ├── app.js
@@ -216,16 +221,17 @@ Voluntrip/
 │   └── media/
 │
 └── views/
-├── about.ejs
-├── apply.ejs
-├── connect.ejs
-├── explore.ejs
-├── file_not_found.ejs
-├── home.ejs
-├── index.ejs
-├── login.ejs
-├── register.ejs
-├── reviews.ejs
-└── includes/
+    ├── about.ejs
+    ├── apply.ejs
+    ├── connect.ejs
+    ├── explore.ejs
+    ├── file_not_found.ejs
+    ├── home.ejs
+    ├── index.ejs
+    ├── login.ejs
+    ├── register.ejs
+    ├── reviews.ejs
+    └── includes/
+```
 
 ---
