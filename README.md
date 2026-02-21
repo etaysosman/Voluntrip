@@ -221,6 +221,7 @@ Voluntrip/
 │   └── media/
 │
 └── views/
+    ├── cpanel/
     ├── about.ejs
     ├── apply.ejs
     ├── connect.ejs
