@@ -1,0 +1,69 @@
+/* ============================================================
+   1. GLOBAL STYLES & LAYOUT
+   ============================================================ */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f6f9;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* ============================================================
+   2. TYPOGRAPHY & BRANDING
+   ============================================================ */
+.main-logo {
+  font-family: 'Oswald', sans-serif;
+  color: #17a2b8;
+  font-size: 2.5rem;
+}
+
+/* Big 404 error number */
+.error-code {
+  font-family: 'Oswald', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #343a40;
+  line-height: 1;
+  margin-bottom: 0;
+}
+
+/* Descriptive error message */
+.error-msg {
+  font-size: 1.5rem;
+  color: #6c757d;
+}
+
+/* ============================================================
+   3. ANIMATED ELEMENTS
+   ============================================================ */
+.earth-img {
+  max-width: 220px;
+  margin: 20px auto;
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Floating effect for the earth icon */
+@keyframes float {
+  0% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-15px);
+  }
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+/* ============================================================
+   4. COMPONENTS
+   ============================================================ */
+.btn-custom-home {
+  padding: 12px 30px;
+  font-weight: bold;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1px;
+  border-radius: 50px;
+  text-transform: uppercase;
+}
