@@ -7,8 +7,7 @@ Its mission is to make international volunteering accessible, simple, and impact
 
 ---
 
-# ! Please note that as there is no node_modules folder when downloading the project
-#   manual NPM Installations are required -> see 🚀 Installation & Setup
+# ! Please note that as there is no node_modules folder when downloading the project manual NPM Installations are required -> see 🚀 Installation & Setup
 
 # 📋 Table of Contents
 
