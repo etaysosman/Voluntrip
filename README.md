@@ -1,3 +1,4 @@
+
 # 🌍 VolunTrip
 
 VolunTrip is an innovative web platform designed to connect users with meaningful volunteer opportunities around the world.
@@ -5,6 +6,8 @@ VolunTrip is an innovative web platform designed to connect users with meaningfu
 Its mission is to make international volunteering accessible, simple, and impactful by enabling users to discover, explore, and apply for global volunteer activities.
 
 ---
+
+# ! Please note that when downloading the project  manual NPM Installations are required -> see 🚀 Installation & Setup
 
 # 📋 Table of Contents
 
